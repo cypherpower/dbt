@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Raw data imported from MySQL to Redshift
+      - name: employees
+        description: Employee data imported from MySQL database
+        columns:
+          - name: employee_id
+            description: Unique employee identifier
+            tests:
+              - unique
+              - not_null
+          - name: employee_name
+            description: Full name of the employee
+          - name: gender
+            description: Employee gender (M/F/Other)
+          - name: department
+            description: Department where employee works
+          - name: salary
+            description: Annual salary in USD
+          - name: hire_date
+            description: Date when employee was hired

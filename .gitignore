@@ -1,0 +1,21 @@
+# dbt files
+target/
+dbt_packages/
+.dbtignore
+
+# Python
+*.py[cod]
+__pycache__/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
