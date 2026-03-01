@@ -1,15 +1,12 @@
 -- Replicates the Informatica employee_count mapping
--- Counts employees by gender with a representative employee row
+-- Counts employees grouped by gender
 
 {{ config(
     alias='employee_count'
 ) }}
 
 select
-    count(*) over (partition by gender) as count,
-    birth_date,
-    first_name,
-    last_name,
-    gender,
-    hire_date
+    count(id) as count,
+    gender
 from {{ ref('stg_employees') }}
+group by gender
