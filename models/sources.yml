@@ -2,8 +2,7 @@ version: 2
 
 sources:
   - name: employees
-    database: warehouse
-    schema: employees
+    schema: postgres__employees
     description: Employee data in Redshift
     tables:
       - name: employee
