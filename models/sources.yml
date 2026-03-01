@@ -8,7 +8,7 @@ sources:
       - name: employee
         description: Employee records
         columns:
-          - name: emp_no
+          - name: id
             description: Unique employee identifier
             tests:
               - unique

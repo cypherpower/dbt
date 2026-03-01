@@ -1,9 +1,9 @@
 select
-    emp_no,
+    id,
     birth_date,
     first_name,
     last_name,
     gender,
     hire_date
 from {{ source('employees', 'employee') }}
-where emp_no is not null
+where id is not null
