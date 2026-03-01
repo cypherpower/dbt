@@ -1,12 +1,39 @@
--- Replicates the Informatica employee_count mapping
--- Counts employees grouped by gender
+with source_data as (
+    select
+        id,
+        birth_date,
+        first_name,
+        last_name,
+        gender,
+        hire_date
+    from {{ ref('stg_employee') }}
+),
 
-{{ config(
-    alias='employee_count'
-) }}
+aggregated as (
+    select
+        count(id) as count,
+        cast(id as integer) as emp_no,
+        birth_date,
+        first_name,
+        last_name,
+        gender,
+        hire_date
+    from source_data
+    group by
+        gender,
+        id,
+        birth_date,
+        first_name,
+        last_name,
+        hire_date
+)
 
 select
-    count(id) as count,
-    gender
-from {{ ref('stg_employees') }}
-group by gender
+    count,
+    emp_no,
+    birth_date,
+    first_name,
+    last_name,
+    gender,
+    hire_date
+from aggregated
