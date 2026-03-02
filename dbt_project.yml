@@ -1,8 +1,8 @@
-name: "analytics"
-version: "1.0.0"
+name: 'informatica_migration'
+version: '1.0.0'
 config-version: 2
 
-profile: "analytics"
+profile: 'migrate_loop_wu4rftiuywfq7klrnkmno_1'
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -17,8 +17,12 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  analytics:
+  informatica_migration:
+    +materialized: table
+    +schema: analytics
     staging:
       +materialized: view
+      +schema: analytics
     marts:
       +materialized: table
+      +schema: analytics

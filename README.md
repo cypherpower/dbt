@@ -9,7 +9,7 @@ dbt/
 ├── dbt_project.yml          # Project configuration
 ├── models/
 │   ├── staging/             # Data imports and minimal transformations
-│   │   └── stg_employees.sql      # Prepare employee data from source
+│   │   └── stg_employee.sql      # Prepare employee data from source
 │   ├── marts/               # Business-ready aggregated tables
 │   │   └── employees_by_gender.sql # Employee counts and salary insights by gender
 │   └── sources.yml          # Source table definitions
@@ -71,21 +71,21 @@ dbt docs serve
 
 Once employee data is in `raw.employees` in Redshift, dbt will:
 
-1. Read from `raw.employees` (stg_employees model)
+1. Read from `raw.employees` (stg_employee model)
 2. Aggregate by gender
 3. Write results to `analytics_dev.employees_by_gender` (or your configured schema)
 
 ## Models
 
-### `stg_employees` (Staging)
+### `stg_employee` (Staging)
 
 - **Source**: `raw.employees`
 - **Purpose**: Clean and prepare employee data
-- **Output**: `analytics_dev.stg_employees`
+- **Output**: `analytics_dev.stg_employee`
 
 ### `employees_by_gender` (Mart)
 
-- **Source**: `stg_employees`
+- **Source**: `stg_employee`
 - **Purpose**: Aggregate employee metrics by gender
 - **Metrics**: Count, avg/min/max salary, total salary, departments, hire date range
 - **Output**: `analytics_dev.employees_by_gender`

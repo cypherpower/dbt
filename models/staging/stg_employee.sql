@@ -1,13 +1,7 @@
-with source as (
-    select
-        id,
-        birth_date,
-        first_name,
-        last_name,
-        gender,
-        hire_date
-    from {{ source('employees', 'employee') }}
-)
+{{ config(
+    materialized='view',
+    schema='analytics'
+) }}
 
 select
     id,
@@ -16,4 +10,4 @@ select
     last_name,
     gender,
     hire_date
-from source
+from {{ source('employees', 'employee') }}

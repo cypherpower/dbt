@@ -2,14 +2,13 @@ version: 2
 
 sources:
   - name: employees
-    schema: postgres__employees
-    description: Employee data in Redshift
+    schema: public
     tables:
       - name: employee
         columns:
           - name: id
             data_type: bigint
-            description: "Employee ID"
+            description: "Primary key"
           - name: birth_date
             data_type: date
             description: "Employee birth date"
