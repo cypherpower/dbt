@@ -2,7 +2,7 @@ name: 'informatica_migration'
 version: '1.0.0'
 config-version: 2
 
-profile: 'migrate_loop_wtibyu1bjipj79x5ovzba_1'
+profile: 'migrate_loop_jaffgj3ghczuopqt1c3xw_1'
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
