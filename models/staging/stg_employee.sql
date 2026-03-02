@@ -10,4 +10,4 @@ select
     last_name,
     gender,
     hire_date
-from {{ source('employees', 'employee') }}
+from {{ source('postgres__employees', 'employee') }}

@@ -1,14 +1,14 @@
 version: 2
 
 sources:
-  - name: employees
-    schema: public
+  - name: postgres__employees
+    schema: postgres__employees
     tables:
       - name: employee
         columns:
           - name: id
             data_type: bigint
-            description: "Primary key"
+            description: "Employee ID"
           - name: birth_date
             data_type: date
             description: "Employee birth date"
