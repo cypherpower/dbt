@@ -65,9 +65,9 @@ dbt docs serve
 
 **⚠️ dbt does NOT move data.** The employee data must be pre-loaded into Redshift:
 
-- **Option 1**: Use AWS DMS (Database Migration Service) to replicate MySQL → Redshift
+- **Option 1**: Use AWS DMS (Database Migration Service) to replicate Postgres → Redshift
 - **Option 2**: Use a third-party ETL tool (Stitch, Fivetran, Airbyte)
-- **Option 3**: Custom Python/Node.js script that reads MySQL and writes to Redshift
+- **Option 3**: Custom Python/Node.js script that reads Postgres and writes to Redshift
 
 Once employee data is in `raw.employees` in Redshift, dbt will:
 
