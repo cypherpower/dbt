@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: postgres__employees
+    schema: postgres__employees
+    tables:
+      - name: employees
+        description: Source employee data from MySQL
+
+models:
+  - name: employee_count
+    description: Employee records migrated to analytics schema
+    columns:
+      - name: employee_id
+        description: Unique employee identifier
+        tests:
+          - not_null
+          - unique
+      - name: first_name
+        description: Employee first name
+      - name: last_name
+        description: Employee last name
+      - name: email
+        description: Employee email address
+      - name: department
+        description: Department name
+      - name: hire_date
+        description: Date employee was hired
+      - name: salary
+        description: Employee salary
+      - name: manager_id
+        description: Reference to manager employee_id
+      - name: job_title
+        description: Employee job title
+      - name: status
+        description: Employment status
+      - name: created_at
+        description: Record creation timestamp
+      - name: updated_at
+        description: Record last update timestamp
