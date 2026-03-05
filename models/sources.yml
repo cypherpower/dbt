@@ -8,7 +8,7 @@ sources:
         columns:
           - name: id
             data_type: bigint
-            description: "Employee ID"
+            description: "Primary key"
           - name: birth_date
             data_type: date
             description: "Employee birth date"
