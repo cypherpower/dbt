@@ -2,14 +2,27 @@ version: 2
 
 sources:
   - name: postgres__employees
-    description: 'Source schema from MySQL containing employee data'
+    schema: postgres__employees
     tables:
       - name: employee_count
-        description: 'Employee count table from source system'
+        identifier: employee_count
 
 models:
   - name: employee_count
-    description: 'Employee count model migrated to Redshift analytics schema'
-    config:
-      materialized: table
-      schema: analytics
+    description: "Employee count data migrated from MySQL to Redshift"
+    columns:
+      - name: id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: employee_id
+        description: "Employee identifier"
+      - name: department
+        description: "Department name"
+      - name: count_value
+        description: "Count value"
+      - name: created_at
+        description: "Record creation timestamp"
+      - name: updated_at
+        description: "Record update timestamp"
