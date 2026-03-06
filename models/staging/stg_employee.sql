@@ -1,5 +1,5 @@
 with source as (
-  select * from postgres_employees.employees
+  select * from postgres_employees.employee
 ),
 renamed as (
   select
