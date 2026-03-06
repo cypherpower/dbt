@@ -9,4 +9,9 @@ select
   hire_date,
   count(*) as count
 from base
-group by gender, birth_date, first_name, last_name, hire_date
+group by 
+  gender,
+  birth_date,
+  first_name,
+  last_name,
+  hire_date
