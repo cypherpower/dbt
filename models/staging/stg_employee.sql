@@ -1,19 +1,14 @@
 with source as (
-    select
-        id,
-        birth_date,
-        first_name,
-        last_name,
-        gender,
-        hire_date
-    from {{ source('employees', 'employee') }}
-)
-
-select
-    id,
-    birth_date,
+  select * from postgres_employees.employees
+),
+renamed as (
+  select
+    employee_id,
     first_name,
     last_name,
     gender,
-    hire_date
-from source
+    hire_date,
+    department
+  from source
+)
+select * from renamed
