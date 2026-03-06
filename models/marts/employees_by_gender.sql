@@ -1,6 +1,3 @@
-with base as (
-  select * from {{ ref('stg_employee') }}
-)
 select
   gender,
   first_name,
@@ -8,4 +5,4 @@ select
   birth_date,
   hire_date,
   1 as count
-from base
+from {{ ref('stg_employee') }}
