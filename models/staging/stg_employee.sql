@@ -8,8 +8,7 @@ renamed as (
     last_name,
     gender,
     hire_date,
-    department,
-    salary
+    department
   from source
 )
 select * from renamed
