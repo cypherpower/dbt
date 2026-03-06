@@ -1,0 +1,28 @@
+[0m11:17:44.657015 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aaeb8f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3e5460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3e50d0>]}
+
+
+============================== 11:17:44.661835 | a26cf6cb-606b-4b59-9b5c-9ea5d5560ff0 ==============================
+[0m11:17:44.661835 [info ] [MainThread]: Running with dbt=1.11.7
+[0m11:17:44.662272 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'debug': 'False', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'log_path': '/Users/cyphercon/migrate-loop/dbt/logs', 'no_print': 'None', 'warn_error': 'None', 'invocation_command': 'dbt run --select stg_employee', 'fail_fast': 'False', 'write_json': 'True', 'target_path': 'None', 'printer_width': '80', 'version_check': 'True', 'profiles_dir': '/Users/cyphercon/.dbt', 'use_colors': 'True', 'log_format': 'default', 'partial_parse': 'True', 'cache_selected_only': 'False', 'introspect': 'True'}
+[0m11:17:44.665141 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'default'
+[0m11:17:45.092116 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.49022546, "process_in_blocks": "0", "process_kernel_time": 0.193614, "process_mem_max_rss": "110215168", "process_out_blocks": "0", "process_user_time": 0.934129}
+[0m11:17:45.093467 [debug] [MainThread]: Command `dbt run` failed at 11:17:45.093189 after 0.49 seconds
+[0m11:17:45.094295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096ee7b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a6a6420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3594c0>]}
+[0m11:17:45.094993 [debug] [MainThread]: Flushing usage events
+[0m11:17:45.690510 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:18:30.763778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b0d3c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2fd4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2fd130>]}
+
+
+============================== 11:18:30.768245 | 70e199ce-33f8-449b-9c4a-7a6162cb00da ==============================
+[0m11:18:30.768245 [info ] [MainThread]: Running with dbt=1.11.7
+[0m11:18:30.768654 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'target_path': 'None', 'no_print': 'None', 'log_format': 'default', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/Users/cyphercon/migrate-loop/dbt/logs', 'debug': 'False', 'partial_parse': 'True', 'version_check': 'True', 'invocation_command': 'dbt run --select stg_employee', 'profiles_dir': '/Users/cyphercon/.dbt', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'write_json': 'True', 'static_parser': 'True', 'use_colors': 'True', 'empty': 'False', 'printer_width': '80', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m11:18:30.770936 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'default'
+[0m11:18:30.773042 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.061399333, "process_in_blocks": "0", "process_kernel_time": 0.181738, "process_mem_max_rss": "109756416", "process_out_blocks": "0", "process_user_time": 0.916307}
+[0m11:18:30.773419 [debug] [MainThread]: Command `dbt run` failed at 11:18:30.773360 after 0.06 seconds
+[0m11:18:30.773652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5da270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10af33500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b289370>]}
+[0m11:18:30.773870 [debug] [MainThread]: Flushing usage events
+[0m11:18:31.077226 [debug] [MainThread]: An error was encountered while trying to flush usage events

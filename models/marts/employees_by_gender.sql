@@ -1,11 +1,11 @@
 with base as (
   select * from {{ ref('stg_employee') }}
-),
-aggregated as (
-  select
-    gender,
-    count(*) as employee_count
-  from base
-  group by gender
 )
-select * from aggregated
+select
+  gender,
+  first_name,
+  last_name,
+  birth_date,
+  hire_date,
+  1 as count
+from base

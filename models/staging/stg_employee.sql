@@ -1,1 +1,1 @@
-select * from postgres_employees.employee
+select * from postgres_employees.employees
