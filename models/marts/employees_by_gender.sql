@@ -1,5 +1,5 @@
 select
   gender,
   count(*) as employee_count
-from {{ ref('stg_employee') }}
+from postgres_employees.employee
 group by gender
