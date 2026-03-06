@@ -1,28 +1,12 @@
-name: 'informatica_migration'
+name: 'employee_analytics'
 version: '1.0.0'
 config-version: 2
-
-profile: 'migrate_loop_xxdhpcbhah7kfgv1kqsc4_1'
-
+profile: 'default'
 model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
-
-target-path: "target"
-clean-targets:
-  - "target"
-  - "dbt_packages"
-
 models:
-  informatica_migration:
-    +materialized: table
-    +schema: analytics
+  employee_analytics:
     staging:
       +materialized: view
-      +schema: analytics
     marts:
       +materialized: table
       +schema: analytics
