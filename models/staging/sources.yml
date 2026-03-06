@@ -1,7 +1,7 @@
 version: 2
 sources:
   - name: postgres__employees
-    schema: postgres__employees
+    schema: public
     description: "Source data loaded by Fivetran"
     tables:
       - name: employee_count
