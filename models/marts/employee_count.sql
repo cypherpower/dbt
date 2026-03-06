@@ -3,6 +3,6 @@ with base as (
 )
 select
   gender,
-  count(*) as employee_count
+  count(*) as count
 from base
 group by gender
