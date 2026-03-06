@@ -1,5 +1,11 @@
-select
-  gender,
-  count(*) as employee_count
-from postgres_employees.employee
-group by gender
+with base as (
+  select * from {{ ref('stg_employee') }}
+),
+aggregated as (
+  select
+    gender,
+    count(*) as employee_count
+  from base
+  group by gender
+)
+select * from aggregated
