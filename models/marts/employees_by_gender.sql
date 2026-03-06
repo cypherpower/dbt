@@ -3,9 +3,6 @@ with base as (
 )
 select
   gender,
-  first_name,
-  last_name,
-  birth_date,
-  hire_date,
-  count
+  count(*) as employee_count
 from base
+group by gender
