@@ -1,8 +1,7 @@
 with base as (
-  select * from {{ ref('stg_employees') }}
+  select * from {{ ref('stg_employee_count') }}
 )
-select
+select 
   gender,
-  count(*) as employee_count
+  count
 from base
-group by gender

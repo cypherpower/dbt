@@ -1,10 +1,10 @@
-name: 'employee_analytics'
+name: 'employee_migration'
 version: '1.0.0'
 config-version: 2
 profile: 'default'
 model-paths: ["models"]
 models:
-  employee_analytics:
+  employee_migration:
     staging:
       +materialized: view
     marts:

@@ -2,7 +2,7 @@ with source as (
   select * from {{ source('postgres__employees', 'employee_count') }}
 ),
 renamed as (
-  select
+  select 
     gender,
     count
   from source

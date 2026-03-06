@@ -4,5 +4,5 @@ sources:
     schema: postgres__employees
     description: "Source data loaded by Fivetran"
     tables:
-      - name: employees
-        description: "Raw employees from source system"
+      - name: employee_count
+        description: "Raw employee_count from source system"
