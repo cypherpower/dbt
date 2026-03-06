@@ -3,6 +3,10 @@ with base as (
 )
 select
   gender,
-  count(*) as employee_count
+  birth_date,
+  first_name,
+  last_name,
+  hire_date,
+  count(*) as count
 from base
-group by gender
+group by gender, birth_date, first_name, last_name, hire_date
