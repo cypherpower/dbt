@@ -1,9 +1,9 @@
 with source as (
-  select * from postgres_employees.employees
+  select * from postgres_employees.employee
 ),
 renamed as (
   select
-    employee_id,
+    id as employee_id,
     first_name,
     last_name,
     gender,
